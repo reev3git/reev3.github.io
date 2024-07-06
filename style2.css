@@ -7,6 +7,14 @@ body {
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    animation-name: transitionin;
+    animation-duration: 0.85s;
+    animation-iteration-count:1;
+    animation-direction:alternate;
+}
+@keyframes transitionin {
+  from{opacity:0;}
+  to{opacity:1;}
 }
 p {
     font-family: monospace;
@@ -262,7 +270,9 @@ a:active {
     transform: translateY(-2000px);
   }
 }
-
+::selection {
+  background: rgba(0, 0, 0, 0);
+}
 
 @keyframes glow{
   from{text-shadow:0px 0px 5px #fff,0px 0px 5px #fff;}
